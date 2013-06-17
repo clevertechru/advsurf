@@ -13,6 +13,99 @@
 
 ActiveRecord::Schema.define(:version => 20130615112428) do
 
+  create_table "operator1s", :force => true do |t|
+    t.integer  "operator_id"
+    t.string   "file_name"
+    t.float    "file_size"
+    t.string   "file_md5"
+    t.integer  "file_records"
+    t.string   "file_comment"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "operator_newses", :force => true do |t|
+    t.integer  "operator_id"
+    t.string   "file_name"
+    t.float    "file_size"
+    t.string   "file_md5"
+    t.integer  "file_records"
+    t.string   "file_comment"
+    t.text     "file_attach"
+    t.text     "upload"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "upload_file_name"
+    t.string   "upload_content_type"
+    t.integer  "upload_file_size"
+    t.datetime "upload_updated_at"
+  end
+
+  create_table "operator_volgobalts", :force => true do |t|
+    t.integer  "operator_id"
+    t.string   "file_name"
+    t.float    "file_size"
+    t.string   "file_md5"
+    t.integer  "file_records"
+    t.string   "file_comment"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "operators", :force => true do |t|
+    t.string   "title"
+    t.string   "comment"
+    t.string   "site_link"
+    t.integer  "rating"
+    t.string   "controller_path"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "places", :force => true do |t|
+    t.integer  "operator_id"
+    t.string   "address"
+    t.string   "address_orig"
+    t.string   "side"
+    t.string   "region"
+    t.string   "gid"
+    t.boolean  "illumination"
+    t.float    "grp"
+    t.float    "ots"
+    t.string   "type"
+    t.float    "price"
+    t.boolean  "nds"
+    t.string   "photo"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "year_current_1"
+    t.integer  "year_current_2"
+    t.integer  "year_current_3"
+    t.integer  "year_current_4"
+    t.integer  "year_current_5"
+    t.integer  "year_current_6"
+    t.integer  "year_current_7"
+    t.integer  "year_current_8"
+    t.integer  "year_current_9"
+    t.integer  "year_current_10"
+    t.integer  "year_current_11"
+    t.integer  "year_current_12"
+    t.integer  "year_next_1"
+    t.integer  "year_next_2"
+    t.integer  "year_next_3"
+    t.integer  "year_next_4"
+    t.integer  "year_next_5"
+    t.integer  "year_next_6"
+    t.integer  "year_next_7"
+    t.integer  "year_next_8"
+    t.integer  "year_next_9"
+    t.integer  "year_next_10"
+    t.integer  "year_next_11"
+    t.integer  "year_next_12"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.integer  "resource_id"

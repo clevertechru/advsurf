@@ -1,3 +1,6 @@
+require 'string_extensions'
+include StringExtensions
+
 class ApplicationController < ActionController::Base
   protect_from_forgery
 

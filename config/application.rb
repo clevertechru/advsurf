@@ -20,6 +20,8 @@ module Advsurf
 
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
+
+      g.orm :active_record
       
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
