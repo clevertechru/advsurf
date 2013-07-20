@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-gem 'rails', '3.2.13'
+gem 'rails', '~>3.2.13'
 gem 'mysql2'
-gem 'mongoid', ">= 3.1.4"
+gem 'mongoid', "~> 3.1.4"
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -29,7 +29,7 @@ gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "devise", ">= 2.2.3"
 gem "cancan", ">= 1.6.9"
-gem "rolify", ">= 3.2.0"
+gem "rolify", ">= 3.2.0", :git => 'https://github.com/EppO/rolify.git'
 gem "omniauth", ">= 1.1.4"
 gem "omniauth-github", ">= 1.1.0"
 #gem "omniauth-twitter"
@@ -39,3 +39,4 @@ gem "quiet_assets", ">= 1.0.2", :group => :development
 gem "figaro", ">= 0.6.3"
 gem "better_errors", ">= 0.7.2", :group => :development
 gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
+gem 'pry-rails', :group => [:development, :test]
