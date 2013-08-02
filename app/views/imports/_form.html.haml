@@ -1,0 +1,12 @@
+= simple_form_for(@import) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :file_name
+    = f.input :file_size
+    = f.input :file_hash
+    = f.input :file_items
+    = f.input :file_type
+
+  .form-actions
+    = f.button :submit

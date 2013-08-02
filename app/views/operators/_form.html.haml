@@ -1,0 +1,13 @@
+= simple_form_for(@operator) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :id
+    = f.input :title
+    = f.input :comment
+    = f.input :site_url
+    = f.input :rating
+    = f.input :controller
+
+  .form-actions
+    = f.button :submit

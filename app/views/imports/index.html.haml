@@ -1,0 +1,27 @@
+%h1 Listing imports
+
+%table
+  %tr
+    %th File name
+    %th File size
+    %th File hash
+    %th File Items
+    %th File type
+    %th
+    %th
+    %th
+
+  - @imports.each do |import|
+    %tr
+      %td= import.file_name
+      %td= import.file_size
+      %td= import.file_hash
+      %td= import.file_items
+      %td= import.file_type
+      %td= link_to 'Show', import
+      %td= link_to 'Edit', edit_import_path(import)
+      %td= link_to 'Destroy', import, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Import', new_import_path

@@ -1,0 +1,29 @@
+%h1 Listing operators
+
+%table
+  %tr
+    %th Id
+    %th Title
+    %th Comment
+    %th Site url
+    %th Rating
+    %th Controller
+    %th
+    %th
+    %th
+
+  - @operators.each do |operator|
+    %tr
+      %td= operator.id
+      %td= operator.title
+      %td= operator.comment
+      %td= operator.site_url
+      %td= operator.rating
+      %td= operator.controller
+      %td= link_to 'Show', operator
+      %td= link_to 'Edit', edit_operator_path(operator)
+      %td= link_to 'Destroy', operator, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Operator', new_operator_path

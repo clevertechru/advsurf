@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b File name:
+  = @import.file_name
+%p
+  %b File size:
+  = @import.file_size
+%p
+  %b File hash:
+  = @import.file_hash
+%p
+  %b Items:
+  = @import.file_items
+%p
+  %b File type:
+  = @import.file_type
+
+= link_to 'Edit', edit_import_path(@import)
+\|
+= link_to 'Back', imports_path

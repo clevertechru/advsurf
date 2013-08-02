@@ -302,6 +302,7 @@ DEPENDENCIES
   haml-rails
   html2haml
   jquery-rails
+  json
   launchy
   mongoid
   mongoid-rspec

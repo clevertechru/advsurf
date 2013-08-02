@@ -1,0 +1,105 @@
+%h1 Listing places
+
+%table
+  %tr
+    %th Id
+    %th Hash
+    %th Operator
+    %th Address
+    %th Address orig
+    %th Side
+    %th Region
+    %th Gid
+    %th Illumination
+    %th Grp
+    %th Ots
+    %th Type
+    %th Price
+    %th Price rub
+    %th Price usd
+    %th Nds
+    %th Photo
+    %th Latitude
+    %th Longitude
+    %th Date
+    %th Year current 1
+    %th Year current 2
+    %th Year current 3
+    %th Year current 4
+    %th Year current 5
+    %th Year current 6
+    %th Year current 7
+    %th Year current 8
+    %th Year current 9
+    %th Year current 10
+    %th Year current 11
+    %th Year current 12
+    %th Year next 1
+    %th Year next 2
+    %th Year next 3
+    %th Year next 4
+    %th Year next 5
+    %th Year next 6
+    %th Year next 7
+    %th Year next 8
+    %th Year next 9
+    %th Year next 10
+    %th Year next 11
+    %th Year next 12
+    %th
+    %th
+    %th
+
+  - @places.each do |place|
+    %tr
+      %td= place.id
+      %td= place.hash
+      %td= place.operator_id
+      %td= place.address
+      %td= place.address_orig
+      %td= place.side
+      %td= place.region
+      %td= place.gid
+      %td= place.illumination
+      %td= place.grp
+      %td= place.ots
+      %td= place.type
+      %td= place.price
+      %td= place.price_rub
+      %td= place.price_usd
+      %td= place.nds
+      %td= place.photo
+      %td= place.latitude
+      %td= place.longitude
+      %td= place.date
+      %td= place.year_current_1
+      %td= place.year_current_2
+      %td= place.year_current_3
+      %td= place.year_current_4
+      %td= place.year_current_5
+      %td= place.year_current_6
+      %td= place.year_current_7
+      %td= place.year_current_8
+      %td= place.year_current_9
+      %td= place.year_current_10
+      %td= place.year_current_11
+      %td= place.year_current_12
+      %td= place.year_next_1
+      %td= place.year_next_2
+      %td= place.year_next_3
+      %td= place.year_next_4
+      %td= place.year_next_5
+      %td= place.year_next_6
+      %td= place.year_next_7
+      %td= place.year_next_8
+      %td= place.year_next_9
+      %td= place.year_next_10
+      %td= place.year_next_11
+      %td= place.year_next_12
+      %td= link_to 'Show', place
+      %td= link_to 'Edit', edit_place_path(place)
+      %td= link_to 'Destroy', place, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Place', new_place_path
